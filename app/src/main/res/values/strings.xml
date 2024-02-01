@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">DataStoreCompose</string>
+
+    <string name="forgot_password">Forgot\nPassword?</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="remember_now">Remember now?</string>
+    <string name="login_here">Login Here</string>
+    <string name="login_to_find_best_food">Login to\nfind the best food</string>
+    <string name="need_help">Need help?</string>
+    <string name="dont_share_info">Please provide your email to reset your password,Please don\'t share ant data to other people</string>
+    <string name="forgot_pwd">Forgot password?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up_fb">Sign up with facebook</string>
+    <string name="dont_have_acc">Don\'t have an account?</string>
+    <string name="register">Register</string>
+    <string name="register_new_acc">Register\nnew account</string>
+    <string name="full_name">Full Name</string>
+    <string name="phone">Phone</string>
+    <string name="login">Login</string>
+    <string name="verification">Verification</string>
+    <string name="otp_sent_msg">We have sent code verification to your\nmobile phone number ***915</string>
+    <string name="dint_receive_code">Didn\'t received code?</string>
+    <string name="resend">Re-Send</string>
+
+</resources>
