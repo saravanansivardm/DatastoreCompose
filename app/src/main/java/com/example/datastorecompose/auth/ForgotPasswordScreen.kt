@@ -27,6 +27,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
@@ -57,7 +58,9 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.datastorecompose.viewmodel.auth.ForgotPasswordViewModel
 import com.example.datastorecompose.R
+import com.example.datastorecompose.ui.theme.DataStoreComposeTheme
 import com.example.datastorecompose.ui.theme.YellowColor
+import com.example.datastorecompose.utils.DataStorePreview
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -67,8 +70,9 @@ import kotlinx.coroutines.launch
 @Composable
 fun ForgotPasswordScreen(
     navController: NavController,
-    forgotPasswordViewModel: ForgotPasswordViewModel = hiltViewModel()
-) {
+
+    ) {
+    val forgotPasswordViewModel: ForgotPasswordViewModel = hiltViewModel()
     var email by remember { mutableStateOf("") }
     var errorMessage by remember { mutableStateOf("") }
     var isError by remember { mutableStateOf(true) }
@@ -228,8 +232,12 @@ fun validateUserInput(
 }
 
 
-@Preview(showBackground = true)
+@DataStorePreview
 @Composable
 fun PreviewForgotPasswordScreen() {
-    ForgotPasswordScreen(navController = rememberNavController())
+    DataStoreComposeTheme {
+        Surface(modifier = Modifier.fillMaxSize()) {
+            ForgotPasswordScreen(navController = rememberNavController())
+        }
+    }
 }

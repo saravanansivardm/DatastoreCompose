@@ -18,6 +18,11 @@ import javax.inject.Inject
 class LoginViewModel @Inject constructor(
     private val dataRepository: DataStoreRepo,
 ) : ViewModel() {
+    private val _emailError = MutableLiveData<String>()
+    val emailError: LiveData<String> = _emailError
+
+    private val _passwordError = MutableLiveData<String>()
+    val passwordError: LiveData<String> = _passwordError
 
     fun validateLoginCredentials(emailAddress: String, password: String): Pair<Boolean, String> {
         var result = Pair(true, "")
@@ -32,11 +37,7 @@ class LoginViewModel @Inject constructor(
         }
         return result
     }
-    private val _emailError = MutableLiveData<String>()
-    val emailError: LiveData<String> = _emailError
 
-    private val _passwordError = MutableLiveData<String>()
-    val passwordError: LiveData<String> = _passwordError
 
     fun validateEmail(email: String) {
         if (email.isEmpty()) {
